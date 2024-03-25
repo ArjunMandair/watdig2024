@@ -86,7 +86,8 @@ class TurnAndMoveActionServer(Node):
             self.current_gyro = self.gyro_request()
             self.get_logger().info(f"Current Gyro: {self.current_gyro}")
         
-        self.current_action_publisher.publish(String(data="driving"))    
+        self.current_action_publisher.publish(String(data="driving"))
+        #Test  
         
         self.p.pulse_count = 0
         self.Car.drive(0)
